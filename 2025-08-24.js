@@ -15,12 +15,12 @@ samples('github:tidalcycles/dirt-samples')
 samples({ vocals: 'https://cdn.freesound.org/previews/555/555917_11532701-lq.mp3' })
 
 // util
-function bpmToCps(bpm) {
+function bpmToCpm(bpm) {
   return bpm / 4;
 }
 
 // init
-setcpm(bpmToCps(165))
+setcpm(bpmToCpm(165))
 let __scale = "f#:minor"
 
 // drums
@@ -75,10 +75,10 @@ $: n(active_melody_pattern)
 $: n("[-10 -12 -11 -14]/8")
   .scale(__scale)
   .s("saw")
-  .lpf(sine.range(100,800).slow(2))
-  .lpq(sine.range(1,20).slow(1))
-  // .lpf(slider(400, 0, 2500))
-  // .lpq(slider(10, 0, 50))
+  // .lpf(sine.range(100,800).slow(2))
+  // .lpq(sine.range(1,20).slow(1))
+  .lpf(slider(400, 0, 2500))
+  .lpq(slider(10, 0, 50))
   .mask("<1 1 1 1>/8")
   .gain(1.25)
   ._punchcard({height: 25, width: 1600})
