@@ -8,6 +8,7 @@
 
 @by cruush
 @url https://instagram.com/cruush
+@url https://strudel.cc
 */
 
 // samples
