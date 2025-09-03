@@ -65,7 +65,6 @@ $: n("< 1 0 < -3 -2 > < -4 -1 > >".sub(8))
   .gain(1.00)
   ._scope()
 
-
 // drums
 const __bd = s("bd:0")
   .bank("tr808")
