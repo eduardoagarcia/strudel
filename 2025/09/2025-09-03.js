@@ -16,8 +16,8 @@ const __scale = "d#:minor"
 const __bd_duckorbit = "1"
 
 // lead
-const __lead_current = 1
-const __lead_sequence = [
+const __lead_current = 0
+const __lead_sequences = [
   {
     n: rand.range(-8, 8).seg(16).rib(50,1),
     struct: "1 ~ ~ 1 1 ~ 1 1 < ~ ~ ~ 1 > 1 ~ ~ 1 < ~ 1 > ~ 1"
@@ -28,11 +28,11 @@ const __lead_sequence = [
   }
 ]
 
-$: n(__lead_sequence[__lead_current].n)
+$: n(__lead_sequences[__lead_current].n)
   .scale(__scale)
   .s("saw")
   // .fm(rand.range(0, 4).round())
-  .struct(__lead_sequence[__lead_current].struct)
+  .struct(__lead_sequences[__lead_current].struct)
   .velocity(rand.range(0.75, 1.2))
   .ftype("24db")
   .lpf(15)
@@ -64,6 +64,7 @@ $: n("< 1 0 < -3 -2 > < -4 -1 > >".sub(8))
   .lpsustain(0.25)
   .gain(1.00)
   ._scope()
+
 
 // drums
 const __bd = s("bd:0")
