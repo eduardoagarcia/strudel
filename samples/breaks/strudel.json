@@ -1,6 +1,8 @@
 {
   "_base": "https://raw.githubusercontent.com/eduardoagarcia/strudel/main/samples/breaks/",
   "cruush_breaks": [
-    "01.wav"
+    "01.wav",
+    "02.wav",
+    "03.wav"
   ]
 }
